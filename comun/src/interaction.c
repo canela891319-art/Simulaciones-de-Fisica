@@ -5,7 +5,7 @@ bool DragCircleMouse(Circle *circle, Vector2 mousePosition, Vector2 mouseDelta, 
     static bool isDragging = false;
 
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-        if (CheckCollisionPointCircle(mousePosition, circle->body->position, circle->radius + 40.0f)) {
+        if (CheckCollisionPointCircle(mousePosition, (Vector2) {circle->body->position.x, circle->body->position.y}, circle->radius + 40.0f)) {
             isDragging = true;
         }
     }

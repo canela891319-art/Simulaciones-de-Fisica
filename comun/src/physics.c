@@ -32,10 +32,10 @@ void EdgeCollisionCircle(Circle *circle, int width, int height) {
     }
 }
 
-void UpdateBody(Body *self, float dt) {
-    self->position.x +=  self->velocity.x * dt + 0.5f * self->acceleration.x * dt * dt;  // Position = x0 + v0*t + (a*t2)/2
-    self->velocity.x += self->acceleration.x * dt;    // Velocity = v0 + a*t
+void UpdateBody(Body *body, float dt) {
+    body->position.x +=  body->velocity.x * dt + 0.5f * body->acceleration.x * dt * dt;  // Position = x0 + v0*t + (a*t2)/2
+    body->velocity.x += body->acceleration.x * dt;    // Velocity = v0 + a*t
 
-    self->position.y +=  self->velocity.y * dt + 0.5f * self->acceleration.y * dt * dt;  // Position = x0 + v0*t + (a*t2)/2
-    self->velocity.y += self->acceleration.y * dt;    // Velocity = v0 + a*t
+    body->position.y +=  body->velocity.y * dt + 0.5f * body->acceleration.y * dt * dt;  // Position = x0 + v0*t + (a*t2)/2
+    body->velocity.y += body->acceleration.y * dt;    // Velocity = v0 + a*t
 }

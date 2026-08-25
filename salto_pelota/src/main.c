@@ -31,9 +31,8 @@ int main()
     };
 
     float deltaTime;
-    Vector2 gravitForce;
 
-    while (!WindowShouldClose)
+    while (!WindowShouldClose())
     {
         deltaTime = GetFrameTime();
 
