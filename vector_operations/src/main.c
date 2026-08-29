@@ -19,10 +19,12 @@ int main(void) {
     
     Vector2 windowSize = {windowWidth, windowHeight};
 
-    while (!WindowShouldClose) {
+    while (!WindowShouldClose()) {
 
         windowSize = (Vector2){GetScreenWidth(), GetScreenHeight()};
         BeginDrawing();
+
+            ClearBackground(RAYWHITE);
 
             DrawCoordinatePlane((Vector2){GetScreenWidth() / 2, GetScreenHeight() / 2}, windowSize, 100, BLACK, BLUE);
 

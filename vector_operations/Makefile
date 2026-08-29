@@ -11,7 +11,7 @@ SRCS = src/main.c ../comun/src/math1.c ../comun/src/physics.c ../comun/src/rende
 OBJS = $(addprefix build/, $(notdir $(SRCS:.c=.o)))
 
 # Directorio y nombre del ejecutable final
-TARGET = bin/simulador
+TARGET = bin/simulator
 
 all: create_dirs $(TARGET)
 
